@@ -1,0 +1,212 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: linear-gradient(to right, #E78F81, #FFCFB3, #EDE8DC);
+
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: white; /* Fixed missing semicolon */
+    padding: 1px;
+}
+
+.navbar-container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-right: 100px;
+    padding: 5px;
+}
+
+/* Styling the search form */
+.search-form {
+    display: flex; /* Use flexbox for search input and button */
+    align-items: center;
+    margin-right: 100px;
+}
+
+/* Styling the search input */
+.search-input {
+    padding: 8px;
+    width: 300px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px; /* Adjusted margin */
+}
+
+/* Styling the search button */
+.search-btn {
+    padding: 8px 16px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Hover effect for the search button */
+.search-btn:hover {
+    background-color: #444;
+}
+
+/* Album list styles */
+.album-list {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 100%;
+    border-collapse: separate; /* Use separate borders */
+    border-spacing: 15px 10px; /* Increased space between rows and columns */
+}
+
+.album {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for album cover */
+.album-cover {
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+    border-radius: 8px;
+}
+
+/* Styles for song info */
+.song-info {
+    flex-grow: 1;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column; /* Stack the song name and artist name */
+}
+
+.song-name {
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.artist-name {
+    margin: 5px 0;
+    color: black;
+}
+
+.play-button {
+    background-color: #555;
+    color: black; /* Changed to black for better contrast */
+    border: none;
+    border-radius: 4px;
+    padding: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px; /* Space between the play button and control buttons */
+}
+
+.play-button:hover {
+    background-color: #444;
+}
+
+.play-button i {
+    font-size: 20px;
+}
+
+/* Control button styles */
+.control-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #555;
+}
+
+.control-button i {
+    font-size: 24px;
+}
+
+.control-button:hover {
+    color: #333;
+}
+
+/* Body styles for index.ejs */
+body {
+    background: linear-gradient(to right, #E78F81, #15B392, #B7E0FF);
+}
+
+/* Center the main content area */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px; /* Space around the content */
+    background-color: black; /* Background color for the content area */
+    border-radius: 8px; /* Rounded corners for the content area */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for the content area */
+    max-width: 800px; /* Maximum width for content */
+    margin: 20px auto; /* Centering with margin */
+}
+
+/* Container styles */
+.container {
+    background-color: #FFF5CD; /* Light yellow background color */
+    padding: 20px; /* Padding inside the container */
+    border-radius: 8px; /* Rounded corners for the container */
+    color: black; /* Text color for the content */
+    max-width: 900px; /* Max width for the container */
+    margin: 20px auto; /* Centering with auto margin */
+}
+
+/* Navbar styles */
+.navbar {
+    margin-bottom: 20px; /* Space between navbar and content */
+}
+
+/* Table styles */
+.album-list {
+    width: 100%; 
+    border-collapse: collapse; 
+}
+
+.album-cover {
+    width: 50px; 
+    height: auto; 
+}
+
+.song-name,
+.artist-name {
+    margin: 20px; 
+}
+
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 10px;
+}
+
+.play-button,
+.control-button {
+    background-color: transparent;
+    border: none;
+    color: black;
+    margin-left: 100px; 
+}
+
+
+.control-button:hover {
+    padding-right: 50px;
+    margin-right: 10px;
+    color: black; 
+}
+@media (max-width: 768px) {
+    .control-button {
+        width: 50px; 
+    }
+}

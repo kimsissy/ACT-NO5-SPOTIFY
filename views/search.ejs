@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Songs</title>
+    <link rel="stylesheet" href="/styles.css">
+<body>
+    <div class="player">
+        <div class="wrapper">
+            <div class="container"> 
+                <div class="search-container">
+                    <form action="/search" method="GET">
+                        <input type="text" name="q" class="search-box" placeholder="Search for a song, artist, or album" value="<%= searchTerm %>">
+                        <button type="submit" class="search-button">Search</button>
+                    </form>
+                </div>
+
+                <% if (songs.length > 0) { %>
+                    <h2>Results for "<%= searchTerm %>":</h2>
+                    <ul>
+                        <% songs.forEach(song => { %>
+                            <li><strong><%= song.title %></strong> by <%= song.artist %> (Album: <%= song.album %>)</li>
+                        <% }); %>
+                    </ul>
+                <% } else { %>
+                    <p>No results found.</p>
+                <% } %>
+            </div> 
+        </div>
+    </div>
+</body>
+</html>

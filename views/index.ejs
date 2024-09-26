@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Library</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <form action="/search" method="GET" class="search-form">
+                <input type="text" class="search-input" name="q" id="search-input" placeholder="Search for an album or artist..." required>
+                <button type="submit" class="search-btn">Search</button>
+            </form>
+        </div>
+    </nav>
+    
+    <br><br>
+
+    <div class="container"> 
+        <table class="album-list">
+            <tr>
+                <td>
+                    <img src="images/1989.jpg" alt="Album 1" class="album-cover">
+                </td>
+                <td>
+                    <p class="song-name">Clean</p>
+                </td>
+                <td>
+                    <p class="artist-name">Taylor Swift</p>
+                </td>
+                <td>
+                    <div class="player-controls">
+                        <button class="control-button" onclick="changeTrack(-1, 0)">
+                            <i class="fas fa-step-backward fa-lg"></i>
+                        </button>
+                        <button class="control-button" id="play-pause-0" onclick="togglePlayPause(0)">
+                            <i class="fas fa-play-circle fa-lg"></i>
+                        </button>
+                        <button class="control-button" onclick="changeTrack(1, 0)">
+                            <i class="fas fa-step-forward fa-lg"></i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="images/lover.jpg" alt="Album 2" class="album-cover">
+                </td>
+                <td>
+                    <p class="song-name">Daylight</p>
+                </td>
+                <td>
+                    <p class="artist-name">Taylor Swift</p>
+                </td>
+                <td>
+                    <div class="player-controls">
+                        <button class="control-button" onclick="changeTrack(-1, 1)">
+                            <i class="fas fa-step-backward fa-lg"></i>
+                        </button>
+                        <button class="control-button" id="play-pause-1" onclick="togglePlayPause(1)">
+                            <i class="fas fa-play-circle fa-lg"></i>
+                        </button>
+                        <button class="control-button" onclick="changeTrack(1, 1)">
+                            <i class="fas fa-step-forward fa-lg"></i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="images/fearless.jpg" alt="Album 3" class="album-cover">
+                </td>
+                <td>
+                    <p class="song-name">Say Don't Go</p>
+                </td>
+                <td>
+                    <p class="artist-name">Taylor Swift</p>
+                </td>
+                <td>
+                    <div class="player-controls">
+                        <button class="control-button" onclick="changeTrack(-1, 2)">
+                            <i class="fas fa-step-backward fa-lg"></i>
+                        </button>
+                        <button class="control-button" id="play-pause-2" onclick="togglePlayPause(2)">
+                            <i class="fas fa-play-circle fa-lg"></i>
+                        </button>
+                        <button class="control-button" onclick="changeTrack(1, 2)">
+                            <i class="fas fa-step-forward fa-lg"></i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="images/wallows.jpg" alt="Album 4" class="album-cover">
+                </td>
+                <td>
+                    <p class="song-name">These Days</p>
+                </td>
+                <td>
+                    <p class="artist-name">Wallows</p>
+                </td>
+                <td>
+                    <div class="player-controls">
+                        <button class="control-button" onclick="changeTrack(-1, 3)">
+                            <i class="fas fa-step-backward fa-lg"></i>
+                        </button>
+                        <button class="control-button" id="play-pause-3" onclick="togglePlayPause(3)">
+                            <i class="fas fa-play-circle fa-lg"></i>
+                        </button>
+                        <button class="control-button" onclick="changeTrack(1, 3)">
+                            <i class="fas fa-step-forward fa-lg"></i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="images/1D.jpg" alt="Album 5" class="album-cover">
+                </td>
+                <td>
+                    <p class="song-name">18</p>
+                </td>
+                <td>
+                    <p class="artist-name">One Direction</p>
+                </td>
+                <td>
+                    <div class="player-controls">
+                        <button class="control-button" onclick="changeTrack(-1, 4)">
+                            <i class="fas fa-step-backward fa-lg"></i>
+                        </button>
+                        <button class="control-button" id="play-pause-4" onclick="togglePlayPause(4)">
+                            <i class="fas fa-play-circle fa-lg"></i>
+                        </button>
+                        <button class="control-button" onclick="changeTrack(1, 4)">
+                            <i class="fas fa-step-forward fa-lg"></i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="images/lover.jpg" alt="Album 6" class="album-cover">
+                </td>
+                <td>
+                    <p class="song-name">Cruel Summer</p>
+                </td>
+                <td>
+                    <p class="artist-name">Taylor Swift</p>
+                </td>
+                <td>
+                    <div class="player-controls">
+                        <button class="control-button" onclick="changeTrack(-1, 5)">
+                            <i class="fas fa-step-backward fa-lg"></i>
+                        </button>
+                        <button class="control-button" id="play-pause-5" onclick="togglePlayPause(5)">
+                            <i class="fas fa-play-circle fa-lg"></i>
+                        </button>
+                        <button class="control-button" onclick="changeTrack(1, 5)">
+                            <i class="fas fa-step-forward fa-lg"></i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="images/paramore.jpg" alt="Album 7" class="album-cover">
+                </td>
+                <td>
+                    <p class="song-name">Hard Times</p>
+                </td>
+                <td>
+                    <p class="artist-name">Paramore</p>
+                </td>
+                <td>
+                    <div class="player-controls">
+                        <button class="control-button" onclick="changeTrack(-1, 6)">
+                            <i class="fas fa-step-backward fa-lg"></i>
+                        </button>
+                        <button class="control-button" id="play-pause-6" onclick="togglePlayPause(6)">
+                            <i class="fas fa-play-circle fa-lg"></i>
+                        </button>
+                        <button class="control-button" onclick="changeTrack(1, 6)">
+                            <i class="fas fa-step-forward fa-lg"></i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="images/5sos.jpg" alt="Album 8" class="album-cover">
+                </td>
+                <td>
+                    <p class="song-name">Wildflower</p>
+                </td>
+                <td>
+                    <p class="artist-name">5sos</p>
+                </td>
+                <td>
+                    <div class="player-controls">
+                        <button class="control-button" onclick="changeTrack(-1, 7)">
+                            <i class="fas fa-step-backward fa-lg"></i>
+                        </button>
+                        <button class="control-button" id="play-pause-7" onclick="togglePlayPause(7)">
+                            <i class="fas fa-play-circle fa-lg"></i>
+                        </button>
+                        <button class="control-button" onclick="changeTrack(1, 7)">
+                            <i class="fas fa-step-forward fa-lg"></i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div> 
+
+    <audio id="audio-player" src=""></audio>
+</body>
+</html>
